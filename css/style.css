@@ -135,3 +135,28 @@ body{
     width: 93%;
 }
 /* HIGHLIGHTS AREA ENDS */
+
+/* FOOTER AREA STARTS */
+.footer-area{
+    margin-top: 150px;
+    text-align: center;
+}
+.footer-details img{
+    width: 400px;
+    margin-bottom: 20px;
+}
+.social_icons a{
+    font-size: 20px;
+    color: #969BAB;
+    margin: 0 15px;
+    width: 32px;
+    height: 32px;
+    padding: 10px 5px 0 5px;
+    background-color: #E7E7E8;
+    display: inline-block;
+    border-radius: 100%;
+}
+.footer-details p{
+    margin: 30px 0;
+}
+/* FOOTER AREA ENDS */
