@@ -108,7 +108,6 @@ p{
 /* BLOG AREA STARTS */
 .blog-area{
     margin-top: 100px;
-    padding: 0 50px;
 }
 .all-blogs{
     display: grid;
@@ -129,10 +128,48 @@ p{
 }
 /* BLOG AREA ENDS */
 
+/* GAME REPORTS AREA STARTS */
+.game-report-area{
+    margin-top: 100px;
+}
+.game-reports{
+    display: flex;
+}
+.report{
+    text-align: center;
+}
+.report p{
+    margin: 0;
+    color: #6C6C6C;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 400;
+}
+.report > h1{
+    font-size: 35px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 20px 0;
+}
+.result{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1.5em;
+    margin: 20px 0 40px 0; 
+}
+.result .flag img{
+    width: 120px;
+    height: 80px;
+}
+.result .score h1{
+    font-size: 60px;
+    font-weight: 700;
+}
+/* GAME REPORTS AREA ENDS */
+
 /* HIGHLIGHTS AREA STARTS */
 .highlights-area{
     margin-top: 100px;
-    padding: 0 50px;
 }
 .highlights{
     display: flex;
