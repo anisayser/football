@@ -22,14 +22,6 @@ body{
         transform: rotate(360deg);
     }
 }
-@keyframes slideLeft {
-    form{
-        margin-left: -100px;
-    }
-    to{
-        margin-left: 0;
-    }
-}
 
 /* UTILITIES */
 .container{
@@ -259,9 +251,6 @@ p{
 .time_table_box table tr{
     border: 1px solid #ddd;
 }
-/* .time_table_box table tr:last-child{
-    border: none;
-} */
 .time_table_box table td{
     padding: 10px;
 }
@@ -295,7 +284,6 @@ p{
     margin: 30px 0;
 }
 /* FOOTER AREA ENDS */
-
 
 
 /*++++++++++++++++++++++++++++++
@@ -352,9 +340,6 @@ p{
         grid-template-columns: 1fr 1fr;
         grid-gap: 2em;
     }
-
-
-
 
     /* GAME REPORTS */
     .game-reports{
@@ -451,8 +436,6 @@ p{
         grid-template-columns: 1fr;
         grid-gap: 2em;
     }
-    
-
 }
 
 @media only screen and (max-width: 500px) {
