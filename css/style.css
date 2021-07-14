@@ -10,6 +10,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 body{
     font-family: 'Poppins', sans-serif;
+    margin: 0 auto;
 }
 
 /* ANIMATION KEYFRAMES */
@@ -19,6 +20,14 @@ body{
     }
     to{
         transform: rotate(360deg);
+    }
+}
+@keyframes slideLeft {
+    form{
+        margin-left: -100px;
+    }
+    to{
+        margin-left: 0;
     }
 }
 
@@ -50,7 +59,8 @@ p{
 /* HEADER AREA STARTS */
 .header-area{
     background-color: #2D25A0;
-    height: 100vh;
+    height: auto;
+    padding-bottom: 100px;
 }
 
 /* menu */
@@ -59,6 +69,11 @@ p{
     justify-content: space-between;
     padding: 30px 0;
     align-items: center;
+}
+.menu-area nav i{
+    font-size: 30px;
+    color: white;
+    display: none;
 }
 .menu-area nav a{
     text-decoration: none;
@@ -140,9 +155,13 @@ p{
     margin-top: 100px;
 }
 .game-reports{
-    display: flex;
-    justify-content: space-between;
-
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+}
+.video-content iframe{
+    width: 100%;
+    height: 100%;
 }
 .report{
     text-align: center;
@@ -182,48 +201,24 @@ p{
 }
 .highlights{
     display: flex;
+    flex-wrap: wrap;
 }
 .highlight-text{
-    width: 45%;
+    width: 50%;
 }
 .highlight-text h2{
     font-size: 48px;
     font-weight: 700;
-    margin: 70px 0 16px 0;
+    margin: 0 0 16px 0;
 }
 .thumbnail{
-    width: 55%;
+    width: 50%;
     text-align: right;
 }
 .thumbnail img{
     width: 93%;
 }
 /* HIGHLIGHTS AREA ENDS */
-
-/* FOOTER AREA STARTS */
-.footer-area{
-    margin-top: 150px;
-    text-align: center;
-}
-.footer-details img{
-    width: 400px;
-    margin-bottom: 20px;
-}
-.social_icons a{
-    font-size: 20px;
-    color: #969BAB;
-    margin: 0 15px;
-    width: 32px;
-    height: 32px;
-    padding: 10px 5px 0 5px;
-    background-color: #E7E7E8;
-    display: inline-block;
-    border-radius: 100%;
-}
-.footer-details p{
-    margin: 30px 0;
-}
-/* FOOTER AREA ENDS */
 
 /* TRAINING SCHEDUAL AREA STARTS */
 .training_scheduals{
@@ -262,11 +257,11 @@ p{
     font-weight: 400;
 }
 .time_table_box table tr{
-    border-bottom: 1px solid #ddd;
+    border: 1px solid #ddd;
 }
-.time_table_box table tr:last-child{
+/* .time_table_box table tr:last-child{
     border: none;
-}
+} */
 .time_table_box table td{
     padding: 10px;
 }
@@ -275,3 +270,197 @@ p{
     grid-row: 1/3;
 }
 /* TRAINING SCHEDUAL AREA ENDS */
+
+/* FOOTER AREA STARTS */
+.footer-area{
+    margin-top: 150px;
+    text-align: center;
+}
+.footer-details img{
+    width: 400px;
+    margin-bottom: 20px;
+}
+.social_icons a{
+    font-size: 20px;
+    color: #969BAB;
+    margin: 0 15px;
+    width: 32px;
+    height: 32px;
+    padding: 10px 5px 0 5px;
+    background-color: #E7E7E8;
+    display: inline-block;
+    border-radius: 100%;
+}
+.footer-details p{
+    margin: 30px 0;
+}
+/* FOOTER AREA ENDS */
+
+
+
+/*++++++++++++++++++++++++++++++
+      ALL SCREEN MEDIA QUERY
+++++++++++++++++++++++++++++++++*/
+@media only screen and (max-width: 992px) {
+    /* UTILITIES */
+    .container{
+        width: 95%;
+    }
+    .header-area{
+        height: auto;
+        padding-bottom: 10px;
+    }
+    /* menu */
+    .menu-area{
+        padding: 30px 0;
+        align-items: flex-start;
+        position: relative;
+    }
+    
+    .menu-area nav a{
+        display: none;
+    }
+    .menu-area nav i{
+        display: block;
+    }
+    /* banner */
+    .banner-area{
+        display: flex;
+        padding-top: 10px;
+        flex-direction: column;
+    }
+    .banner-texts{
+        width: 100%;
+        text-align: center;
+    }
+    .banner-texts h1{
+        color: white;
+        font-size: 40px;
+        font-weight: 700;   
+    }
+    .banner-texts a{
+        margin-top: 20px;  
+    }
+    .banner-img{
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+    }
+    /* BLOG AREA */
+    .all-blogs{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 2em;
+    }
+
+
+
+
+    /* GAME REPORTS */
+    .game-reports{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 1em;
+    }
+    .video-content iframe{
+        width: 100%;
+        height: 300px;
+    }
+    /* HIGHLIGHT AREA */
+    .highlight-text{
+        width: 100%;
+        text-align: center;
+    }
+    .highlight-text h2{
+        font-size: 30px;
+        font-weight: 700;
+        margin: 70px 0 16px 0;
+    }
+    .thumbnail{
+        width: 100%;
+        text-align: center;
+        margin-top: 30px;
+    }
+    .thumbnail img{
+        width: 93%;
+    }
+    /* MATCH SCHEDUALS */
+    .time_table_box{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 0.5em;
+    }
+    .table1{
+        grid-column: 1/4;
+    }
+    .table2{
+        grid-column: 1/4;
+    }
+    .table3{
+        grid-column: 1/4;
+    }
+    .time_table_box table th{
+        padding: 10px 0;
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 688px)  {
+    
+    /* UTILITIES */
+    .container{
+        width: 98%;
+    }
+    .header-area{
+        height: auto;
+        padding-bottom: 10px;
+    }
+    /* banner */
+    .banner-area{
+        display: flex;
+        padding-top: 10px;
+        flex-direction: column;
+    }
+    .banner-texts{
+        width: 100%;
+        text-align: center;
+    }
+    .banner-texts h1{
+        color: white;
+        font-size: 40px;
+        font-weight: 700;   
+    }
+    .banner-texts a{
+        margin-top: 10px;  
+    }
+    .banner-img .ball{
+        width: 50px;
+        top: 45px;
+    }
+    .banner-img{
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+    }
+    .banner-img img{
+        width: 300px;
+    }
+    /* BLOG AREA */
+    .all-blogs{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 2em;
+    }
+    
+
+}
+
+@media only screen and (max-width: 500px) {
+    /* REPORT AREA */
+    .result{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: .5em;
+        margin: 20px 0 40px 0; 
+    }
+}
